@@ -1,9 +1,7 @@
 <h1>Automation Exercise Test Automation</h1>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://automationexercise.com/static/images/home/logo.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://automationexercise.com/static/images/home/logo.png">
-  <img alt="automationexercise" src="https://automationexercise.com/static/images/home/logo.png">
-</picture>
+<a href="https://automationexercise.com/" target="_blank">
+<img src="https://automationexercise.com/static/images/home/logo.png" alt="Link Of Website" style="width:400px;height:150px;">
+</a>
 
 <h2>Environment</h2>
 <ul>
