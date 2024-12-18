@@ -9,6 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.SignUpPage;
 import utils.ScreenRecorderUtil;
@@ -41,7 +42,6 @@ public class BaseTest {
         driver.get(dataJsonModel().URL);
 
     }
-
     @AfterClass
     public void tearDown() {
         driver.quit();
@@ -52,10 +52,21 @@ public class BaseTest {
         return dataJson.readDataFromFileJson();
     }
     @AfterMethod
-    public void reportFileResource(Method method) throws Exception {
+    public void reportFileResource(Method method, ITestResult result) throws Exception {
         utilsTest=new UtilsTest(driver);
         utilsTest.takeScreenShot(method);
         ScreenRecorderUtil.stopRecord();
+        utilsTest.setStatus(method,result);
+    }
+    @BeforeSuite
+    public void beforeSuite(){
+        utilsTest=new UtilsTest(driver);
+        utilsTest.createReport();
+    }
+    @AfterSuite
+    public void afterSuite(){
+        utilsTest=new UtilsTest(driver);
+        utilsTest.flushReport();
     }
 
     @Parameters("browser")
