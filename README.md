@@ -29,5 +29,8 @@
 <li>TestNG</li>
 <li>Java utility section for Data-Driven</li>
 <li>Page Object Model (POM) Design pattern</li>
+<li>monte screen recorder</li>
+<li>Screenshots</li>
+
 
 
