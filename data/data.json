@@ -1,0 +1,23 @@
+{
+  "URL": "https://automationexercise.com/",
+  "Username": "adelyousf100@gmail.com",
+  "Password": "123456789",
+  "SignUp":{
+    "Firstname": "Adel",
+    "Lastname": "Yousef",
+    "Password": "123456789",
+    "Address": "Street address, P.O. Box, Company name",
+    "Country": "Egypt",
+    "City": "Cairo",
+    "Zipcode": "12345678",
+    "Mobile": "+201129427799",
+    "State": "Egypt"
+  },
+  "CardDetails": {
+    "Name": "Adel Ali Yousef",
+    "CVC": "123",
+    "Month": "09",
+    "Year": "2024",
+    "Number": "123456789"
+  }
+}
