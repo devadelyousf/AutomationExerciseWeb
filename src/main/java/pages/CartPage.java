@@ -37,17 +37,13 @@ private void insertDataOfCard(String name ,String number,String cvc,String month
     private void clickOnPlaceOrder(){
         click(placeOrder);
     }
-
-    public void completeCheckOut() {
+    public void cardDetails(String name ,String number,String cvc , String month , String year){
         click(iconDelete);
         clickOnProceedToCheckout();
         clickOnPlaceOrder();
-        insertDataOfCard("Adel ali Yousef","322","123","9","2024");
-        waitElements(continueBtn);
+        insertDataOfCard(name,number,cvc,month,year);
         click(continueBtn);
     }
-
-
 
 
 }

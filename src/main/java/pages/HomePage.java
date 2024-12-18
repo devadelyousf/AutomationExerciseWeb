@@ -21,7 +21,6 @@ public class HomePage extends BasePage {
 
     private void clickOnLinkKids(){
         click(LinkKids);
-        waitElements(LinkKidsOfShirts);
         click(LinkKidsOfShirts);
     }
 
@@ -33,7 +32,6 @@ public class HomePage extends BasePage {
                 int priceOfProduct = Integer.parseInt(driver.findElement(By.xpath("(//div[@class=\"productinfo text-center\"]/h2)[" + (i + 1) + "]")).getText().replaceAll("[^0-9]", ""));
                 if (priceOfProduct < 500) {
                     driver.findElement(By.xpath("(//div[@class=\"productinfo text-center\"]/a)[" + (i + 1) + "]")).click();
-                    waitElements(continueShopping);
                     click(continueShopping);
                 }
             }
@@ -44,7 +42,6 @@ public class HomePage extends BasePage {
 
 
     public CartPage navigateToCart(){
-        waitElements(linkOfCart);
         click(linkOfCart);
         return new CartPage(driver);
     }
